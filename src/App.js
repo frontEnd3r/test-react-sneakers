@@ -13,19 +13,19 @@ function App() {
 
   React.useEffect(() => {
     fetch('https://62e82d4593938a545be1f4ba.mockapi.io/items')
-    .then((res) => {
-      return res.json();
-    })
-    .then((json) => {
-      setItems(json);
-    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        setItems(json);
+      })
   }, []);
 
   const onAddToCart = (obj) => {
     setCartItems(prev => [...prev, obj]);
   };
 
-  
+
 
   return (
     <div className="wrapper clear">
@@ -46,12 +46,13 @@ function App() {
 
         <div className="sneakers">
           {
-            items.map((item) => <Card
-              title={item.name}
-              price={item.price}
-              imgUrl={item.ImgUrl}
-              onPlus={(obj) => onAddToCart(obj)}
-            />)
+            items.map((item) =>
+              <Card key={item.id}
+                title={item.name}
+                price={item.price}
+                imgUrl={item.ImgUrl}
+                onPlus={(obj) => onAddToCart(obj)}
+              />)
           }
         </div>
 

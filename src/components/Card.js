@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ title, imgUrl, price, onFavorite, onPlus }) {
+function Card({title, imgUrl, price, onFavorite, onPlus }) {
 
     const [isAdded, setIsAdded] = React.useState(false);
 

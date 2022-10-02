@@ -1,5 +1,5 @@
 function Cart({ onClose, items = [] }) {
-  items.map((obj) => { console.log(obj) })
+
   return (
     <div onClick={onClose} className="overlay">
       <div className="cart d-flex flex-column p-30">
