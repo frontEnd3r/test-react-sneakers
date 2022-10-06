@@ -48,7 +48,12 @@ body {
 
   &__left {}
 
-  &__right {}
+  &-right {
+    &__btn {
+      margin-right: 30px;
+      cursor: pointer;
+    }
+  }
 }
 
 .content {
@@ -143,6 +148,15 @@ body {
       transition: border .3s ease-in-out;
 
 
+    }
+  }
+}
+
+.is-favorite {
+  background-color: #FEF0F0;
+  & svg {
+    & path {
+      fill: #FF4343;
     }
   }
 }
